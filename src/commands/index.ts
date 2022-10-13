@@ -1,8 +1,10 @@
-import {Command} from "utils/types/Command";
+import {TestCommand} from "./test";
+import {TestArgsCommand} from "./testArgs";
 
 
-export const Commands = new Map<string, Command>();
+export const AllCommands = [
+    TestCommand,
+    TestArgsCommand,
+];
 
-export function registerCommand(cmd: Command) {
-    Commands.set(cmd.name, cmd);
-}
+export const Commands = new Map(AllCommands.map((cmd) => [cmd.name, cmd]));

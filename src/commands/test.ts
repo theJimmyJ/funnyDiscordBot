@@ -1,5 +1,4 @@
 import {Command} from "utils/types/Command";
-import {registerCommand} from ".";
 
 
 export const TestCommand: Command = {
@@ -8,4 +7,3 @@ export const TestCommand: Command = {
     },
     name: "test",
 };
-registerCommand(TestCommand);
